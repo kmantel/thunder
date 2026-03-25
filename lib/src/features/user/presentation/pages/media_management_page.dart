@@ -68,7 +68,7 @@ class MediaManagementPage extends StatelessWidget {
                   if (state.status == UserMediaStatus.loading)
                     const SliverFillRemaining(
                       child: Center(
-                        child: CircularProgressIndicator(),
+                        child: CircularProgressIndicator(color: Colors.transparent),
                       ),
                     ),
                   if (state.status == UserMediaStatus.searching ||
@@ -176,7 +176,7 @@ class MediaManagementPage extends StatelessWidget {
                                                               const SizedBox(
                                                                 height: 200,
                                                                 child: Center(
-                                                                  child: CircularProgressIndicator(),
+                                                                  child: CircularProgressIndicator(color: Colors.transparent),
                                                                 ),
                                                               )
                                                             else if (state.status == UserMediaStatus.searchSuccess) ...[

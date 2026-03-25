@@ -103,7 +103,7 @@ class _LinkBottomSheetState extends State<LinkBottomSheet> {
                   padding: const EdgeInsets.only(left: 24, right: 24),
                   child: LinkPreviewGenerator(
                     link: widget.url!,
-                    placeholderWidget: const CircularProgressIndicator(),
+                    placeholderWidget: const CircularProgressIndicator(color: Colors.transparent),
                     linkPreviewStyle: LinkPreviewStyle.large,
                     cacheDuration: Duration.zero,
                     onTap: null,

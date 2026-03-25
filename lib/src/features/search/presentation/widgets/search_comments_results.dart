@@ -31,7 +31,7 @@ class SearchCommentsResults extends StatelessWidget {
                   ? const Center(
                       child: Padding(
                         padding: EdgeInsets.only(bottom: 10),
-                        child: CircularProgressIndicator(),
+                        child: CircularProgressIndicator(color: Colors.transparent),
                       ),
                     )
                   : const SizedBox.shrink();

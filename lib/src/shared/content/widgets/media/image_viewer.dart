@@ -306,7 +306,7 @@ class _ImageViewerState extends State<ImageViewer> with TickerProviderStateMixin
                             if (state.extendedImageLoadState == LoadState.loading) {
                               return Center(
                                 child: CircularProgressIndicator(
-                                  color: Colors.white.withValues(alpha: 0.90),
+                                  color: Colors.transparent,
                                 ),
                               );
                             }
@@ -367,7 +367,7 @@ class _ImageViewerState extends State<ImageViewer> with TickerProviderStateMixin
                             if (state.extendedImageLoadState == LoadState.loading) {
                               return Center(
                                 child: CircularProgressIndicator(
-                                  color: Colors.white.withValues(alpha: 0.90),
+                                  color: Colors.transparent,
                                 ),
                               );
                             }
@@ -477,7 +477,7 @@ class _ImageViewerState extends State<ImageViewer> with TickerProviderStateMixin
                                       height: 20,
                                       width: 20,
                                       child: CircularProgressIndicator(
-                                        color: Colors.white.withValues(alpha: 0.90),
+                                        color: Colors.transparent,
                                       ),
                                     )
                                   : Icon(
@@ -534,7 +534,7 @@ class _ImageViewerState extends State<ImageViewer> with TickerProviderStateMixin
                                       height: 20,
                                       width: 20,
                                       child: CircularProgressIndicator(
-                                        color: Colors.white.withValues(alpha: 0.90),
+                                        color: Colors.transparent,
                                       ),
                                     )
                                   : downloaded

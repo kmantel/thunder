@@ -61,7 +61,7 @@ class _SessionStatusView extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const CircularProgressIndicator(),
+              const CircularProgressIndicator(color: Colors.transparent),
               const SizedBox(height: 16),
               Text(message ?? l10n.loading, textAlign: TextAlign.center),
               if (actionLabel != null && onAction != null) ...[

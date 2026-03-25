@@ -585,7 +585,7 @@ class _CreatePostPageState extends State<CreatePostPage> with WidgetsBindingObse
                                                 child: SizedBox(
                                                   width: 18,
                                                   height: 18,
-                                                  child: CircularProgressIndicator(),
+                                                  child: CircularProgressIndicator(color: Colors.transparent),
                                                 ),
                                               ),
                                             )
@@ -804,7 +804,7 @@ class _CreatePostPageState extends State<CreatePostPage> with WidgetsBindingObse
                                         ? const SizedBox(
                                             height: 20,
                                             width: 20,
-                                            child: CircularProgressIndicator(),
+                                            child: CircularProgressIndicator(color: Colors.transparent),
                                           )
                                         : Icon(
                                             widget.post != null ? Icons.edit_rounded : Icons.send_rounded,

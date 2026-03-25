@@ -443,7 +443,7 @@ class _ThunderState extends State<Thunder> {
                         return Scaffold(
                           appBar: AppBar(toolbarHeight: APP_BAR_HEIGHT),
                           body: Center(
-                            child: CircularProgressIndicator(),
+                            child: CircularProgressIndicator(color: Colors.transparent),
                           ),
                         );
                       case ProfileStatus.contentWarning:

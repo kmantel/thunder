@@ -89,7 +89,7 @@ class _UserIndicatorState extends State<UserIndicator> {
               child: SizedBox(
                 width: 28,
                 height: 28,
-                child: CircularProgressIndicator(),
+                child: CircularProgressIndicator(color: Colors.transparent),
               ),
             ),
           );

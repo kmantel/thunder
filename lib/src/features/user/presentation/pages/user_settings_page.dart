@@ -143,7 +143,7 @@ class _UserSettingsPageState extends State<UserSettingsPage> {
                       AccountSettingsStatus.initial => const SliverFillRemaining(
                           hasScrollBody: false,
                           child: Center(
-                            child: CircularProgressIndicator(),
+                            child: CircularProgressIndicator(color: Colors.transparent),
                           ),
                         ),
                       _ => SliverList.list(

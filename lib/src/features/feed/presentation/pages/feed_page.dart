@@ -447,7 +447,7 @@ class _FeedViewState extends State<FeedView> {
                       if (state.status == FeedStatus.initial)
                         const SliverFillRemaining(
                           hasScrollBody: false,
-                          child: Center(child: CircularProgressIndicator()),
+                          child: Center(child: CircularProgressIndicator(color: Colors.transparent)),
                         ),
                       if (state.status == FeedStatus.failureLoadingCommunity || state.status == FeedStatus.failureLoadingUser)
                         SliverToBoxAdapter(
@@ -509,7 +509,7 @@ class _FeedViewState extends State<FeedView> {
                                     height: state.status == FeedStatus.initial ? MediaQuery.of(context).size.height * 0.5 : null, // Might have to adjust this to be more robust
                                     alignment: Alignment.center,
                                     padding: const EdgeInsets.symmetric(vertical: 16.0),
-                                    child: const CircularProgressIndicator(),
+                                    child: const CircularProgressIndicator(color: Colors.transparent),
                                   ),
                           ),
                       ],

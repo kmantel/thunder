@@ -83,7 +83,7 @@ class SearchBody extends StatelessWidget {
           searchType: state.searchType,
         );
       case SearchStatus.loading:
-        return const Center(child: CircularProgressIndicator());
+        return const Center(child: CircularProgressIndicator(color: Colors.transparent));
       case SearchStatus.refreshing:
       case SearchStatus.success:
       case SearchStatus.done:

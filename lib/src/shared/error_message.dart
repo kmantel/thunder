@@ -48,7 +48,7 @@ class ErrorMessage extends StatelessWidget {
                         ? const SizedBox(
                             width: 20,
                             height: 20,
-                            child: CircularProgressIndicator(),
+                            child: CircularProgressIndicator(color: Colors.transparent),
                           )
                         : Text(actions![0].text),
                   ),
@@ -66,7 +66,7 @@ class ErrorMessage extends StatelessWidget {
                                   ? const SizedBox(
                                       width: 20,
                                       height: 20,
-                                      child: CircularProgressIndicator(),
+                                      child: CircularProgressIndicator(color: Colors.transparent),
                                     )
                                   : Text(action.text),
                             ),

@@ -62,11 +62,11 @@ class ThunderErrorState extends StatelessWidget {
                       child: actions[i].primary || i == 0
                           ? ElevatedButton(
                               onPressed: actions[i].loading ? null : actions[i].onPressed,
-                              child: actions[i].loading ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator()) : Text(actions[i].label),
+                              child: actions[i].loading ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.transparent)) : Text(actions[i].label),
                             )
                           : TextButton(
                               onPressed: actions[i].loading ? null : actions[i].onPressed,
-                              child: actions[i].loading ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator()) : Text(actions[i].label),
+                              child: actions[i].loading ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.transparent)) : Text(actions[i].label),
                             ),
                     ),
                     if (i != actions.length - 1) const SizedBox(height: 12),
