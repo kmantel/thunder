@@ -376,7 +376,7 @@ class _ProfileSelectState extends State<ProfileSelect> {
                                                   ? const SizedBox(
                                                       height: 20,
                                                       width: 20,
-                                                      child: CircularProgressIndicator(),
+                                                      child: CircularProgressIndicator(color: Colors.transparent),
                                                     )
                                                   : Icon(Icons.logout, semanticLabel: AppLocalizations.of(context)!.logOut),
                                               onPressed: () => _logOutOfActiveAccount(activeAccountId: accounts![index].account.id),
@@ -386,7 +386,7 @@ class _ProfileSelectState extends State<ProfileSelect> {
                                                   ? const SizedBox(
                                                       height: 20,
                                                       width: 20,
-                                                      child: CircularProgressIndicator(),
+                                                      child: CircularProgressIndicator(color: Colors.transparent),
                                                     )
                                                   : Icon(
                                                       Icons.delete,

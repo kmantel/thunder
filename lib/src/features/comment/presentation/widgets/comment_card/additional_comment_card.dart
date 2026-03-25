@@ -74,7 +74,7 @@ class _AdditionalCommentCardState extends State<AdditionalCommentCard> {
                   if (isLoading)
                     const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 8.0),
-                      child: SizedBox(width: 20.0, height: 20.0, child: CircularProgressIndicator()),
+                      child: SizedBox(width: 20.0, height: 20.0, child: CircularProgressIndicator(color: Colors.transparent)),
                     )
                 ],
               )

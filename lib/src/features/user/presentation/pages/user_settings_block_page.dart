@@ -71,7 +71,7 @@ class _UserSettingsBlockPageState extends State<UserSettingsBlockPage> with Sing
                   child: SizedBox(
                     width: 25,
                     height: 25,
-                    child: CircularProgressIndicator(),
+                    child: CircularProgressIndicator(color: Colors.transparent),
                   ),
                 )
               : IconButton(
@@ -115,7 +115,7 @@ class _UserSettingsBlockPageState extends State<UserSettingsBlockPage> with Sing
                   child: SizedBox(
                     width: 25,
                     height: 25,
-                    child: CircularProgressIndicator(),
+                    child: CircularProgressIndicator(color: Colors.transparent),
                   ),
                 )
               : IconButton(
@@ -160,7 +160,7 @@ class _UserSettingsBlockPageState extends State<UserSettingsBlockPage> with Sing
                   child: SizedBox(
                     width: 25,
                     height: 25,
-                    child: CircularProgressIndicator(),
+                    child: CircularProgressIndicator(color: Colors.transparent),
                   ),
                 )
               : IconButton(
@@ -327,7 +327,7 @@ class UserSettingBlockList extends StatelessWidget {
     if (status == UserBlocksStatus.initial || status == UserBlocksStatus.loading) {
       return Container(
         margin: const EdgeInsets.all(10.0),
-        child: const Center(child: CircularProgressIndicator()),
+        child: const Center(child: CircularProgressIndicator(color: Colors.transparent)),
       );
     }
 

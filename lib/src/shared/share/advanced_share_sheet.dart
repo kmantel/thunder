@@ -201,7 +201,7 @@ void showAdvancedShareSheet(BuildContext context, ThunderPost post) async {
                                     isComment: true,
                                     showFullHeightImages: true,
                                   )
-                                : const CircularProgressIndicator(),
+                                : const CircularProgressIndicator(color: Colors.transparent),
                           if (options.includePostLink)
                             Text(
                               post.apId,
@@ -361,7 +361,7 @@ void showAdvancedShareSheet(BuildContext context, ThunderPost post) async {
                                             width: 15,
                                             height: 15,
                                             child: CircularProgressIndicator(
-                                              color: Colors.white,
+                                              color: Colors.transparent,
                                             ),
                                           ),
                                         ),

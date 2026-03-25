@@ -377,7 +377,7 @@ class _ExperimentalImageViewerState extends State<ExperimentalImageViewer> {
                                           height: 20,
                                           width: 20,
                                           child: CircularProgressIndicator(
-                                            color: Colors.white.withValues(alpha: 0.9),
+                                            color: Colors.transparent,
                                           ),
                                         )
                                       : Icon(Icons.share_rounded, color: Colors.white.withValues(alpha: 0.9)),
@@ -391,7 +391,7 @@ class _ExperimentalImageViewerState extends State<ExperimentalImageViewer> {
                                           height: 20,
                                           width: 20,
                                           child: CircularProgressIndicator(
-                                            color: Colors.white.withValues(alpha: 0.9),
+                                            color: Colors.transparent,
                                           ),
                                         )
                                       : _downloaded

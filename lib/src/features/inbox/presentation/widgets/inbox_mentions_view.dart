@@ -34,7 +34,7 @@ class _InboxMentionsViewState extends State<InboxMentionsView> {
           if (state.status == InboxStatus.loading)
             const SliverFillRemaining(
               hasScrollBody: false,
-              child: Center(child: CircularProgressIndicator()),
+              child: Center(child: CircularProgressIndicator(color: Colors.transparent)),
             ),
           if (state.status != InboxStatus.loading && widget.mentions.isEmpty)
             SliverFillRemaining(

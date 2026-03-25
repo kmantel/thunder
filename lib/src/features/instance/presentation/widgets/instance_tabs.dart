@@ -60,7 +60,7 @@ class _InstanceTabScaffoldState<T> extends State<_InstanceTabScaffold<T>> with A
     final state = widget.state;
 
     if (state.status == InstancePageStatus.loading && state.items.isEmpty) {
-      return const Center(child: CircularProgressIndicator());
+      return const Center(child: CircularProgressIndicator(color: Colors.transparent));
     }
 
     if (state.status == InstancePageStatus.failure && state.items.isEmpty) {
@@ -104,7 +104,7 @@ class _InstanceTabScaffoldState<T> extends State<_InstanceTabScaffold<T>> with A
               itemCount: state.items.length + (state.status == InstancePageStatus.loading ? 1 : 0),
               itemBuilder: (context, index) {
                 if (index == state.items.length) {
-                  return const Center(child: Padding(padding: EdgeInsets.all(16), child: CircularProgressIndicator()));
+                  return const Center(child: Padding(padding: EdgeInsets.all(16), child: CircularProgressIndicator(color: Colors.transparent)));
                 }
                 return widget.itemBuilder(context, state.items[index]);
               },
@@ -259,7 +259,9 @@ class _InstancePostTabState extends State<InstancePostTab> {
                 onDismissHiddenPost: (postId) => _setPosts(_postListActionController.dismissHiddenPost(_posts, postId)),
                 onDismissBlocked: ({userId, communityId}) => _setPosts(_postListActionController.dismissBlocked(_posts, userId: userId, communityId: communityId)),
               ),
-              if (state.posts.status == InstancePageStatus.loading) const SliverToBoxAdapter(child: Center(child: Padding(padding: EdgeInsets.all(16), child: CircularProgressIndicator()))),
+              if (state.posts.status == InstancePageStatus.loading) {
+                const SliverToBoxAdapter(child: Center(child: Padding(padding: EdgeInsets.all(16), child: CircularProgressIndicator(color: Colors.transparent)))),
+              }
             ],
           ),
           itemBuilder: (context, item) => const SizedBox.shrink(), // Not used when loadingWidget is provided

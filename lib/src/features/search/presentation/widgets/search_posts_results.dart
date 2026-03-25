@@ -83,7 +83,7 @@ class _SearchPostsResultsState extends State<SearchPostsResults> {
                   child: Center(
                     child: Padding(
                       padding: EdgeInsets.only(bottom: 10.0),
-                      child: CircularProgressIndicator(),
+                      child: CircularProgressIndicator(color: Colors.transparent),
                     ),
                   ),
                 ),

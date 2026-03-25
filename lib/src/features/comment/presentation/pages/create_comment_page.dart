@@ -537,7 +537,7 @@ class _CreateCommentPageState extends State<CreateCommentPage> with WidgetsBindi
                                         ? const SizedBox(
                                             height: 20,
                                             width: 20,
-                                            child: CircularProgressIndicator(),
+                                            child: CircularProgressIndicator(color: Colors.transparent),
                                           )
                                         : Icon(
                                             widget.comment != null ? Icons.edit_rounded : Icons.send_rounded,

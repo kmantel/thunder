@@ -40,7 +40,7 @@ class LoadingPage extends StatelessWidget {
               ),
               const SliverFillRemaining(
                 child: Center(
-                  child: CircularProgressIndicator(),
+                  child: CircularProgressIndicator(color: Colors.transparent),
                 ),
               ),
             ],

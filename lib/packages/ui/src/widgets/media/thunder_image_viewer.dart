@@ -579,7 +579,7 @@ class _ThunderImageViewerState extends State<ThunderImageViewer> with TickerProv
   }
 
   Widget _buildDefaultLoader(BuildContext context) {
-    return const Center(child: CircularProgressIndicator());
+    return const Center(child: CircularProgressIndicator(color: Colors.transparent));
   }
 
   Widget _buildDefaultError(BuildContext context, Object error) {

@@ -290,7 +290,7 @@ class _PostPageState extends State<PostPage> {
                       if (state.status == PostStatus.initial || state.status == PostStatus.loading)
                         const SliverFillRemaining(
                           hasScrollBody: false,
-                          child: Center(child: CircularProgressIndicator()),
+                          child: Center(child: CircularProgressIndicator(color: Colors.transparent)),
                         )
                       else if (state.status == PostStatus.failure)
                         SliverFillRemaining(
@@ -485,7 +485,7 @@ class _PostPageFeedEndState extends State<_PostPageFeedEnd> {
       height: 100.0,
       alignment: Alignment.center,
       padding: const EdgeInsets.symmetric(vertical: 16.0),
-      child: const CircularProgressIndicator(),
+      child: const CircularProgressIndicator(color: Colors.transparent),
     );
 
     if (hasReachedCommentEnd == true) {

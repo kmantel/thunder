@@ -197,7 +197,7 @@ class _ReportFeedViewState extends State<ReportFeedView> {
                           if (state.status == ReportStatus.initial)
                             const SliverFillRemaining(
                               hasScrollBody: false,
-                              child: Center(child: CircularProgressIndicator()),
+                              child: Center(child: CircularProgressIndicator(color: Colors.transparent)),
                             ),
 
                           // Widget representing the list of reports on the feed
@@ -406,7 +406,7 @@ class _ReportFeedViewState extends State<ReportFeedView> {
                                     height: state.status == ReportStatus.initial ? MediaQuery.of(context).size.height * 0.5 : null, // Might have to adjust this to be more robust
                                     alignment: Alignment.center,
                                     padding: const EdgeInsets.symmetric(vertical: 16.0),
-                                    child: const CircularProgressIndicator(),
+                                    child: const CircularProgressIndicator(color: Colors.transparent),
                                   ),
                           ),
                         ],
