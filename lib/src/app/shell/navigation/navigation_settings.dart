@@ -36,7 +36,7 @@ void navigateToSettingPage(BuildContext context, LocalSettings setting, {LocalSe
   if (pageToNav == SETTINGS_ABOUT_PAGE) {
     Navigator.of(context).push(
       SwipeablePageRoute(
-        transitionDuration: reduceAnimations ? const Duration(milliseconds: 100) : null,
+        transitionDuration: reduceAnimations ? const Duration(milliseconds: 0) : null,
         canSwipe: !kIsWeb && Platform.isIOS || enableFullScreenSwipeNavigationGesture,
         canOnlySwipeFromEdge: true,
         builder: (context) => MultiBlocProvider(
@@ -50,7 +50,7 @@ void navigateToSettingPage(BuildContext context, LocalSettings setting, {LocalSe
 
     Navigator.of(context).push(
       SwipeablePageRoute(
-        transitionDuration: reduceAnimations ? const Duration(milliseconds: 100) : null,
+        transitionDuration: reduceAnimations ? const Duration(milliseconds: 0) : null,
         canSwipe: !kIsWeb && Platform.isIOS || enableFullScreenSwipeNavigationGesture,
         canOnlySwipeFromEdge: true,
         builder: (context) => MultiBlocProvider(
@@ -67,7 +67,7 @@ void navigateToSettingPage(BuildContext context, LocalSettings setting, {LocalSe
 
     Navigator.of(context).push(
       SwipeablePageRoute(
-        transitionDuration: reduceAnimations ? const Duration(milliseconds: 100) : null,
+        transitionDuration: reduceAnimations ? const Duration(milliseconds: 0) : null,
         canSwipe: !kIsWeb && Platform.isIOS || enableFullScreenSwipeNavigationGesture,
         canOnlySwipeFromEdge: true,
         builder: (context) => MultiBlocProvider(
@@ -92,7 +92,7 @@ void navigateToSettingPage(BuildContext context, LocalSettings setting, {LocalSe
 
     Navigator.of(context).push(
       SwipeablePageRoute(
-        transitionDuration: reduceAnimations ? const Duration(milliseconds: 100) : null,
+        transitionDuration: reduceAnimations ? const Duration(milliseconds: 0) : null,
         canSwipe: !kIsWeb && Platform.isIOS || enableFullScreenSwipeNavigationGesture,
         canOnlySwipeFromEdge: true,
         builder: (context) => MultiBlocProvider(

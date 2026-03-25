@@ -87,7 +87,7 @@ void navigateToNotificationPage(
           : reduceAnimations
               ? const Duration(milliseconds: 100)
               : null,
-      reverseTransitionDuration: reduceAnimations ? const Duration(milliseconds: 100) : const Duration(milliseconds: 500),
+      reverseTransitionDuration: reduceAnimations ? const Duration(milliseconds: 0) : const Duration(milliseconds: 500),
       backGestureDetectionWidth: 45,
       canSwipe: !kIsWeb && Platform.isIOS || gestureCubit.state.enableFullScreenSwipeNavigationGesture,
       canOnlySwipeFromEdge: !gestureCubit.state.enableFullScreenSwipeNavigationGesture,

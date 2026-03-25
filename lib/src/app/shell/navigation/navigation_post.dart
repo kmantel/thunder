@@ -55,7 +55,7 @@ Future<void> navigateToPost(
         : reduceAnimations
             ? const Duration(milliseconds: 100)
             : null,
-    reverseTransitionDuration: reduceAnimations ? const Duration(milliseconds: 100) : const Duration(milliseconds: 500),
+    reverseTransitionDuration: reduceAnimations ? const Duration(milliseconds: 0) : const Duration(milliseconds: 500),
     backGestureDetectionStartOffset: !kIsWeb && Platform.isAndroid ? 45 : 0,
     backGestureDetectionWidth: 45,
     canSwipe: !kIsWeb && Platform.isIOS || enableFullScreenSwipeNavigationGesture,
@@ -112,7 +112,7 @@ Future<void> navigateToComment(BuildContext context, ThunderComment comment) asy
         : reduceAnimations
             ? const Duration(milliseconds: 100)
             : null,
-    reverseTransitionDuration: reduceAnimations ? const Duration(milliseconds: 100) : const Duration(milliseconds: 500),
+    reverseTransitionDuration: reduceAnimations ? const Duration(milliseconds: 0) : const Duration(milliseconds: 500),
     backGestureDetectionWidth: 45,
     canSwipe: !kIsWeb && Platform.isIOS || gestureCubit.state.enableFullScreenSwipeNavigationGesture,
     canOnlySwipeFromEdge: disableFullPageSwipe(isUserLoggedIn: !effectiveAccount.anonymous, state: gestureCubit.state, isPostPage: true) || !gestureCubit.state.enableFullScreenSwipeNavigationGesture,
@@ -176,7 +176,7 @@ Future<ThunderComment?> navigateToCreateCommentPage(
         : reduceAnimations
             ? const Duration(milliseconds: 100)
             : null,
-    reverseTransitionDuration: reduceAnimations ? const Duration(milliseconds: 100) : const Duration(milliseconds: 500),
+    reverseTransitionDuration: reduceAnimations ? const Duration(milliseconds: 0) : const Duration(milliseconds: 500),
     canSwipe: !kIsWeb && Platform.isIOS || enableFullScreenSwipeNavigationGesture,
     canOnlySwipeFromEdge: true,
     builder: (context) => MultiBlocProvider(
@@ -248,7 +248,7 @@ Future<void> navigateToCreatePostPage(
     }
 
     await Navigator.of(context).push(SwipeablePageRoute(
-      transitionDuration: reduceAnimations ? const Duration(milliseconds: 100) : null,
+      transitionDuration: reduceAnimations ? const Duration(milliseconds: 0) : null,
       canSwipe: !kIsWeb && Platform.isIOS || enableFullScreenSwipeNavigationGesture,
       canOnlySwipeFromEdge: true,
       backGestureDetectionWidth: 45,

@@ -49,9 +49,9 @@ Future<void> navigateToFeedPage(
     transitionDuration: isLoadingPageShown
         ? Duration.zero
         : reduceAnimations
-            ? const Duration(milliseconds: 100)
+            ? const Duration(milliseconds: 0)
             : null,
-    reverseTransitionDuration: reduceAnimations ? const Duration(milliseconds: 100) : const Duration(milliseconds: 500),
+    reverseTransitionDuration: reduceAnimations ? const Duration(milliseconds: 0) : const Duration(milliseconds: 500),
     backGestureDetectionWidth: 45,
     canSwipe: !kIsWeb && Platform.isIOS || gestureCubit.state.enableFullScreenSwipeNavigationGesture,
     canOnlySwipeFromEdge: disableFullPageSwipe(isUserLoggedIn: !effectiveAccount.anonymous, state: gestureCubit.state, isFeedPage: true) || !gestureCubit.state.enableFullScreenSwipeNavigationGesture,
@@ -103,7 +103,7 @@ void navigateToSearchPage(BuildContext context) {
 
   Navigator.of(context).push(
     SwipeablePageRoute(
-      transitionDuration: reduceAnimations ? const Duration(milliseconds: 100) : null,
+      transitionDuration: reduceAnimations ? const Duration(milliseconds: 0) : null,
       canSwipe: !kIsWeb && Platform.isIOS || enableFullScreenSwipeNavigationGesture,
       canOnlySwipeFromEdge: true,
       builder: (context) => MultiBlocProvider(

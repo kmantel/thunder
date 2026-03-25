@@ -61,7 +61,7 @@ void showLoadingPage(BuildContext context) {
 
   Navigator.of(context).push(
     SwipeablePageRoute(
-      transitionDuration: reduceAnimations ? const Duration(milliseconds: 100) : null,
+      transitionDuration: reduceAnimations ? const Duration(milliseconds: 0) : null,
       backGestureDetectionWidth: 45,
       canOnlySwipeFromEdge: !enableFullScreenSwipeNavigationGesture,
       canSwipe: false,
