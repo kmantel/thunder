@@ -259,9 +259,8 @@ class _InstancePostTabState extends State<InstancePostTab> {
                 onDismissHiddenPost: (postId) => _setPosts(_postListActionController.dismissHiddenPost(_posts, postId)),
                 onDismissBlocked: ({userId, communityId}) => _setPosts(_postListActionController.dismissBlocked(_posts, userId: userId, communityId: communityId)),
               ),
-              if (state.posts.status == InstancePageStatus.loading) {
+              if (state.posts.status == InstancePageStatus.loading)
                 const SliverToBoxAdapter(child: Center(child: Padding(padding: EdgeInsets.all(16), child: CircularProgressIndicator(color: Colors.transparent)))),
-              }
             ],
           ),
           itemBuilder: (context, item) => const SizedBox.shrink(), // Not used when loadingWidget is provided
