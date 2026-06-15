@@ -106,9 +106,9 @@ Widget buildUserSuggestionWidget(BuildContext context, ThunderUser payload, {voi
         subtitle: Semantics(
           excludeSemantics: true,
           child: Marquee(
-            animationDuration: const Duration(seconds: 2),
-            backDuration: const Duration(seconds: 2),
-            pauseDuration: const Duration(seconds: 1),
+            animationDuration: const Duration(seconds: 0),
+            backDuration: const Duration(seconds: 0),
+            pauseDuration: const Duration(seconds: 0),
             child: UserFullNameWidget(
               name: payload.name,
               displayName: payload.displayName,
@@ -227,9 +227,9 @@ Widget buildCommunitySuggestionWidget(BuildContext context, ThunderCommunity pay
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Marquee(
-                animationDuration: const Duration(seconds: 2),
-                backDuration: const Duration(seconds: 2),
-                pauseDuration: const Duration(seconds: 1),
+                animationDuration: const Duration(seconds: 0),
+                backDuration: const Duration(seconds: 0),
+                pauseDuration: const Duration(seconds: 0),
                 child: CommunityFullNameWidget(
                   name: payload.name,
                   displayName: payload.title,

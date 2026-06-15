@@ -102,8 +102,8 @@ void _showVideoPlayer(BuildContext context, {required String url, int? postId}) 
       Navigator.of(context).push(
         PageRouteBuilder(
           opaque: false,
-          transitionDuration: const Duration(milliseconds: 100),
-          reverseTransitionDuration: const Duration(milliseconds: 50),
+          transitionDuration: const Duration(milliseconds: 0),
+          reverseTransitionDuration: const Duration(milliseconds: 0),
           pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) {
             return (videoId != null) ? ThunderYoutubePlayer(videoUrl: url, postId: postId) : ThunderVideoPlayer(videoUrl: url, postId: postId);
           },

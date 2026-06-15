@@ -263,7 +263,7 @@ class _ImageContent extends StatelessWidget {
         fit: fit,
         color: viewed == true ? const Color.fromRGBO(255, 255, 255, 0.55) : null,
         colorBlendMode: viewed == true ? BlendMode.modulate : null,
-        fadeInDuration: const Duration(milliseconds: 100),
+        fadeInDuration: const Duration(milliseconds: 0),
         fadeOutDuration: Duration.zero,
         memCacheWidth: cacheWidth,
         memCacheHeight: cacheHeight,

@@ -616,7 +616,7 @@ class _ThunderImageViewerState extends State<ThunderImageViewer> with TickerProv
 
     return CachedNetworkImage(
       imageUrl: networkSource.url,
-      fadeInDuration: const Duration(milliseconds: 100),
+      fadeInDuration: const Duration(milliseconds: 0),
       fadeOutDuration: Duration.zero,
       fit: BoxFit.contain,
       imageBuilder: (context, imageProvider) {

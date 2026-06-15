@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:overlay_support/overlay_support.dart';
 
-const Duration _snackBarTransitionDuration = Duration(milliseconds: 500);
+const Duration _snackBarTransitionDuration = Duration(milliseconds: 0);
 
 void showSnackbar(
   String text, {
