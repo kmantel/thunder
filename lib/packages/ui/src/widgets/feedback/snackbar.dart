@@ -170,7 +170,7 @@ class _ThunderSnackbarState extends State<ThunderSnackbar> with WidgetsBindingOb
     final SnackBarThemeData snackBarTheme = theme.snackBarTheme;
 
     final double elevation = snackBarTheme.elevation ?? 6.0;
-    final Color backgroundColor = theme.colorScheme.inverseSurface;
+    final Color backgroundColor = theme.colorScheme.surface;
     final ShapeBorder shape = snackBarTheme.shape ?? RoundedRectangleBorder(borderRadius: BorderRadius.circular(4.0));
 
     child = SafeArea(
