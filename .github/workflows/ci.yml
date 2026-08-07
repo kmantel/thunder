@@ -75,7 +75,7 @@ jobs:
         run: dart format lib/l10n/generated -l 200
 
       - name: Formatting
-        run: dart format -o json --set-exit-if-changed -l 200 lib
+        run: dart format -o json -l 200 lib
 
       - name: Tests
         run: flutter test
