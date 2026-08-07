@@ -117,7 +117,7 @@ class FeedAppBarTitle extends StatelessWidget {
     final FeedBloc feedBloc = context.watch<FeedBloc>();
 
     return AnimatedOpacity(
-      duration: const Duration(milliseconds: 200),
+      duration: const Duration(milliseconds: 0),
       opacity: visible ? 1.0 : 0.0,
       child: ListTile(
         title: Text(

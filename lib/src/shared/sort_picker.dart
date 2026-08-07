@@ -351,7 +351,7 @@ class _SortPickerState<T> extends State<SortPicker<T>> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: AnimatedSize(
-        duration: const Duration(milliseconds: 400),
+        duration: const Duration(milliseconds: 0),
         curve: Curves.easeInOutCubicEmphasized,
         child: hasTopSubmenu && topSelected ? topSortPicker() : defaultSortPicker(),
       ),

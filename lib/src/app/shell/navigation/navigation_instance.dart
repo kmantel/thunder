@@ -36,9 +36,9 @@ Future<void> navigateToInstancePage(
     transitionDuration: isLoadingPageShown
         ? Duration.zero
         : reduceAnimations
-            ? const Duration(milliseconds: 100)
+            ? const Duration(milliseconds: 0)
             : null,
-    reverseTransitionDuration: reduceAnimations ? const Duration(milliseconds: 0) : const Duration(milliseconds: 500),
+    reverseTransitionDuration: reduceAnimations ? const Duration(milliseconds: 0) : const Duration(milliseconds: 0),
     canSwipe: !kIsWeb && Platform.isIOS || enableFullScreenSwipeNavigationGesture,
     canOnlySwipeFromEdge: true,
     builder: (_) => MultiBlocProvider(
@@ -103,9 +103,9 @@ Future<void> navigateToModlogPage(
     transitionDuration: isLoadingPageShown
         ? Duration.zero
         : reduceAnimations
-            ? const Duration(milliseconds: 100)
+            ? const Duration(milliseconds: 0)
             : null,
-    reverseTransitionDuration: reduceAnimations ? const Duration(milliseconds: 0) : const Duration(milliseconds: 500),
+    reverseTransitionDuration: reduceAnimations ? const Duration(milliseconds: 0) : const Duration(milliseconds: 0),
     canSwipe: !kIsWeb && Platform.isIOS || enableFullScreenSwipeNavigationGesture,
     canOnlySwipeFromEdge: true,
     builder: (context) => MultiBlocProvider(

@@ -320,7 +320,7 @@ class _ExperimentalImageViewerState extends State<ExperimentalImageViewer> {
                   child: SafeArea(
                     bottom: false,
                     child: AnimatedOpacity(
-                      duration: const Duration(milliseconds: 180),
+                      duration: const Duration(milliseconds: 0),
                       opacity: _isChromeVisible ? 1 : 0,
                       child: IgnorePointer(
                         ignoring: !_isChromeVisible,
@@ -359,7 +359,7 @@ class _ExperimentalImageViewerState extends State<ExperimentalImageViewer> {
                   child: SafeArea(
                     top: false,
                     child: AnimatedOpacity(
-                      duration: const Duration(milliseconds: 180),
+                      duration: const Duration(milliseconds: 0),
                       opacity: _isChromeVisible ? 1 : 0,
                       child: IgnorePointer(
                         ignoring: !_isChromeVisible,
@@ -436,7 +436,7 @@ class _ExperimentalImageViewerState extends State<ExperimentalImageViewer> {
                     child: SafeArea(
                       top: false,
                       child: AnimatedOpacity(
-                        duration: const Duration(milliseconds: 180),
+                        duration: const Duration(milliseconds: 0),
                         opacity: _isChromeVisible ? 1 : 0,
                         child: IgnorePointer(
                           ignoring: !_isChromeVisible,

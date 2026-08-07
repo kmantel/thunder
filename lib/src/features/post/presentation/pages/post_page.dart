@@ -229,7 +229,7 @@ class _PostPageState extends State<PostPage> {
                   index: adjustedIndex,
                   scrollController: scrollController,
                   alignment: 0,
-                  duration: (estimatedDistance) => const Duration(milliseconds: 250),
+                  duration: (estimatedDistance) => const Duration(milliseconds: 0),
                   curve: (estimatedDistance) => Curves.easeInOutCubicEmphasized,
                 );
               }
@@ -266,7 +266,7 @@ class _PostPageState extends State<PostPage> {
                         key: appBarKey,
                         viewSource: viewSource,
                         onViewSource: (value) => setState(() => viewSource = value),
-                        onReset: () async => await scrollController.animateTo(0, duration: const Duration(milliseconds: 250), curve: Curves.easeInOutCubicEmphasized),
+                        onReset: () async => await scrollController.animateTo(0, duration: const Duration(milliseconds: 0), curve: Curves.easeInOutCubicEmphasized),
                         onCreateCrossPost: () {
                           createCrossPost(
                             context,
@@ -395,7 +395,7 @@ class _PostPageState extends State<PostPage> {
                   ),
                   if (thunderState.hideTopBarOnScroll) Positioned(child: Container(height: MediaQuery.of(context).padding.top, color: theme.colorScheme.surface)),
                   AnimatedSwitcher(
-                    duration: const Duration(milliseconds: 200),
+                    duration: const Duration(milliseconds: 0),
                     child: context.select<ShellChromeCubit, bool>((cubit) => cubit.state.isPostFabOpen)
                         ? Listener(
                             onPointerUp: (details) => context.read<ShellChromeCubit>().setPostFabOpen(false),

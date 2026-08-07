@@ -58,7 +58,7 @@ class _LinkBottomSheetState extends State<LinkBottomSheet> {
 
     return SingleChildScrollView(
       child: AnimatedSize(
-        duration: const Duration(milliseconds: 250),
+        duration: const Duration(milliseconds: 0),
         alignment: Alignment.bottomCenter,
         child: SingleChildScrollView(
           child: Column(

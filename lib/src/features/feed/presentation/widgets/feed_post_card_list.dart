@@ -241,7 +241,7 @@ class _FeedPostCardListState extends State<FeedPostCardList> {
 
     if (isQueuedForRemoval) {
       return TweenAnimationBuilder<double>(
-        duration: const Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: 0),
         tween: Tween<double>(begin: 1.0, end: 0.0),
         builder: (context, value, animatedChild) {
           return ClipRect(

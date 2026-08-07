@@ -60,7 +60,7 @@ class _PostPageFABState extends State<PostPageFAB> {
         account: account,
         title: l10n.sortOptions,
         onSelect: (selected) async {
-          await widget.scrollController.animateTo(0, duration: const Duration(milliseconds: 250), curve: Curves.easeInOutCubicEmphasized);
+          await widget.scrollController.animateTo(0, duration: const Duration(milliseconds: 0), curve: Curves.easeInOutCubicEmphasized);
           if (context.mounted) {
             context.read<PostBloc>().add(GetPostCommentsEvent(commentSortType: selected.payload, reset: true));
           }
@@ -185,7 +185,7 @@ class _PostPageFABState extends State<PostPageFAB> {
           Padding(
             padding: EdgeInsets.only(right: combineNavAndFab ? 0 : 16, bottom: combineNavAndFab ? 5 : 0),
             child: AnimatedSwitcher(
-              duration: const Duration(milliseconds: 250),
+              duration: const Duration(milliseconds: 0),
               child: isFabSummoned
                   ? GestureFab(
                       centered: combineNavAndFab,
@@ -211,7 +211,7 @@ class _PostPageFABState extends State<PostPageFAB> {
                                           index: 0,
                                           scrollController: widget.scrollController,
                                           alignment: 0,
-                                          duration: (estimatedDistance) => const Duration(milliseconds: 250),
+                                          duration: (estimatedDistance) => const Duration(milliseconds: 0),
                                           curve: (estimatedDistance) => Curves.easeInOutCubicEmphasized,
                                         ),
                                       }
@@ -233,7 +233,7 @@ class _PostPageFABState extends State<PostPageFAB> {
                                       index: 0,
                                       scrollController: widget.scrollController,
                                       alignment: 0,
-                                      duration: (estimatedDistance) => const Duration(milliseconds: 250),
+                                      duration: (estimatedDistance) => const Duration(milliseconds: 0),
                                       curve: (estimatedDistance) => Curves.easeInOutCubicEmphasized,
                                     ),
                                   }
@@ -299,7 +299,7 @@ class _PostPageFABState extends State<PostPageFAB> {
                             centered: combineNavAndFab,
                             onPressed: () {
                               PostFabAction.backToTop
-                                  .execute(override: () => {widget.scrollController.animateTo(0, duration: const Duration(milliseconds: 250), curve: Curves.easeInOutCubicEmphasized)});
+                                  .execute(override: () => {widget.scrollController.animateTo(0, duration: const Duration(milliseconds: 0), curve: Curves.easeInOutCubicEmphasized)});
                             },
                             title: PostFabAction.backToTop.getTitle(context),
                             icon: Icon(PostFabAction.backToTop.getIcon()),

@@ -80,8 +80,8 @@ class _ImageViewerState extends State<ImageViewer> with TickerProviderStateMixin
   bool showAltText = false;
 
   void _maybeSlide(BuildContext context) {
-    setState(() => maybeSlideZooming = true);
-    Timer(const Duration(milliseconds: 500), () => context.mounted ? setState(() => maybeSlideZooming = false) : null);
+    setState(() =>  maybeSlideZooming = false);
+    Timer(const Duration(milliseconds: 0), () => context.mounted ? setState(() => maybeSlideZooming = false) : null);
   }
 
   void enterFullScreen() {
@@ -128,7 +128,7 @@ class _ImageViewerState extends State<ImageViewer> with TickerProviderStateMixin
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
 
-    AnimationController animationController = AnimationController(duration: const Duration(milliseconds: 140), vsync: this);
+    AnimationController animationController = AnimationController(duration: const Duration(milliseconds: 0), vsync: this);
     Function() animationListener = () {};
     Animation? animation;
 
@@ -149,7 +149,7 @@ class _ImageViewerState extends State<ImageViewer> with TickerProviderStateMixin
             ),
           ),
           AnimatedContainer(
-            duration: const Duration(milliseconds: 400),
+            duration: const Duration(milliseconds: 0),
             curve: Curves.easeInOutCubicEmphasized,
             color: fullscreen ? Colors.black : Colors.black.withValues(alpha: slideTransparency),
           ),
@@ -384,7 +384,7 @@ class _ImageViewerState extends State<ImageViewer> with TickerProviderStateMixin
               children: [
                 AnimatedOpacity(
                   opacity: fullscreen ? 0.0 : 1.0,
-                  duration: const Duration(milliseconds: 200),
+                  duration: const Duration(milliseconds: 0),
                   child: Container(
                     padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
                     decoration: const BoxDecoration(
@@ -422,7 +422,7 @@ class _ImageViewerState extends State<ImageViewer> with TickerProviderStateMixin
                 const Spacer(),
                 AnimatedOpacity(
                   opacity: fullscreen ? 0.0 : 1.0,
-                  duration: const Duration(milliseconds: 200),
+                  duration: const Duration(milliseconds: 0),
                   child: Container(
                     decoration: const BoxDecoration(
                       gradient: LinearGradient(
@@ -609,7 +609,7 @@ class _ImageViewerState extends State<ImageViewer> with TickerProviderStateMixin
               width: MediaQuery.sizeOf(context).width,
               child: AnimatedOpacity(
                 opacity: fullscreen ? 0.0 : 1.0,
-                duration: const Duration(milliseconds: 200),
+                duration: const Duration(milliseconds: 0),
                 child: Padding(
                   padding: const EdgeInsets.all(16),
                   child: ImageAltText(text: widget.altText!),

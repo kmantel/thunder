@@ -113,7 +113,7 @@ class _ThunderBottomSheetNavigatorState<T> extends State<ThunderBottomSheetNavig
           ),
           Flexible(
             child: AnimatedSwitcher(
-              duration: const Duration(milliseconds: 150),
+              duration: const Duration(milliseconds: 0),
               child: widget.pageBuilder(context, _current, _goTo, _goBack),
             ),
           ),

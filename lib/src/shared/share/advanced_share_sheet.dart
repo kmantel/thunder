@@ -162,7 +162,7 @@ void showAdvancedShareSheet(BuildContext context, ThunderPost post) async {
                 }
 
                 return AnimatedSize(
-                  duration: const Duration(milliseconds: 250),
+                  duration: const Duration(milliseconds: 0),
                   alignment: Alignment.bottomCenter,
                   child: Padding(
                     padding: const EdgeInsets.only(left: 14, right: 14, bottom: 30),

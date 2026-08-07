@@ -44,7 +44,7 @@ class _CrossPostsState extends State<CrossPosts> {
         SizedBox(height: 8.0),
         const Divider(height: 1.0),
         AnimatedSize(
-          duration: const Duration(milliseconds: 350),
+          duration: const Duration(milliseconds: 0),
           curve: Curves.easeInOutCubicEmphasized,
           child: _areCrossPostsExpanded
               ? ListView.builder(

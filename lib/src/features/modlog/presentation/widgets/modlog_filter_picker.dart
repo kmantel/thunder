@@ -97,7 +97,7 @@ class _ModlogActionTypePickerState extends State<ModlogActionTypePicker> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: AnimatedSize(
-        duration: const Duration(milliseconds: 100),
+        duration: const Duration(milliseconds: 0),
         curve: Curves.easeInOut,
         child: switch (category) {
           ModlogActionTypeCategory.all => defaultModlogActionTypePicker(),

@@ -124,7 +124,7 @@ class _ThunderExpandableFabState extends State<ThunderExpandableFab> with Single
     _isOpen = widget.initialOpen;
     _controller = AnimationController(
       value: _isOpen ? 1.0 : 0.0,
-      duration: const Duration(milliseconds: 250),
+      duration: const Duration(milliseconds: 0),
       vsync: this,
     );
     _expandAnimation = CurvedAnimation(
@@ -224,12 +224,12 @@ class _ThunderExpandableFabState extends State<ThunderExpandableFab> with Single
       child: AnimatedContainer(
         transformAlignment: Alignment.center,
         transform: Matrix4.diagonal3Values(_isOpen ? 0.7 : 1, _isOpen ? 0.7 : 1, 1),
-        duration: const Duration(milliseconds: 250),
+        duration: const Duration(milliseconds: 0),
         curve: const Interval(0, 0.5, curve: Curves.easeOut),
         child: AnimatedOpacity(
           opacity: _isOpen ? 0 : 1,
           curve: const Interval(0.25, 1, curve: Curves.easeInOut),
-          duration: const Duration(milliseconds: 250),
+          duration: const Duration(milliseconds: 0),
           child: GestureDetector(
             onVerticalDragUpdate: (details) {
               if (details.delta.dy < -5) {

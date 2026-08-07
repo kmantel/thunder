@@ -227,7 +227,7 @@ class _ModlogCommentItemContextCardState extends State<ModlogCommentItemContextC
                   ),
                   Divider(thickness: 1.0, color: theme.dividerColor.withValues(alpha: 0.3)),
                   AnimatedSize(
-                    duration: const Duration(milliseconds: 100),
+                    duration: const Duration(milliseconds: 0),
                     child: showSensitiveContent
                         ? CommonMarkdownBody(body: widget.comment.content, isComment: true)
                         : InkWell(

@@ -254,7 +254,7 @@ class _FeedViewState extends State<FeedView> {
       return;
     }
 
-    await _scrollController.animateTo(0, duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
+    await _scrollController.animateTo(0, duration: const Duration(milliseconds: 0), curve: Curves.easeInOut);
   }
 
   Future<void> _dismissHiddenPostFromScope(int postId) async {
@@ -519,7 +519,7 @@ class _FeedViewState extends State<FeedView> {
                   AnimatedOpacity(
                     opacity: isFabOpen ? 1.0 : 0.0,
                     curve: Curves.easeInOut,
-                    duration: const Duration(milliseconds: 250),
+                    duration: const Duration(milliseconds: 0),
                     child: Stack(
                       children: [
                         IgnorePointer(
@@ -541,7 +541,7 @@ class _FeedViewState extends State<FeedView> {
                       state.feedType != FeedType.account)
                     AnimatedOpacity(
                       opacity: enableFeedsFab ? 1.0 : 0.0,
-                      duration: const Duration(milliseconds: 150),
+                      duration: const Duration(milliseconds: 0),
                       curve: Curves.easeIn,
                       child: Container(
                         margin: const EdgeInsets.all(16),

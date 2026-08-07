@@ -146,13 +146,13 @@ class _DebugSettingsPageState extends State<DebugSettingsPage> {
             // Ensure that the selected setting is visible on the screen
             Scrollable.ensureVisible(
               settingToHighlightKey.currentContext!,
-              duration: const Duration(milliseconds: 250),
+              duration: const Duration(milliseconds: 0),
               curve: Curves.easeInOut,
             );
           }
 
           // Give time for the highlighting to appear, then turn it off
-          Timer(const Duration(seconds: 1), () {
+          Timer(const Duration(seconds: 0), () {
             setState(() => settingToHighlight = null);
           });
         });

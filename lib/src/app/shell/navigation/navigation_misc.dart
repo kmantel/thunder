@@ -48,7 +48,7 @@ void navigateToWebView(BuildContext context, String url) {
         : reduceAnimations
             ? const Duration(milliseconds: 0)
             : null,
-    reverseTransitionDuration: reduceAnimations ? const Duration(milliseconds: 0) : const Duration(milliseconds: 500),
+    reverseTransitionDuration: reduceAnimations ? const Duration(milliseconds: 0) : const Duration(milliseconds: 0),
     canSwipe: !kIsWeb && Platform.isIOS || enableFullScreenSwipeNavigationGesture,
     canOnlySwipeFromEdge: true,
     builder: (context) => WebView(url: url),

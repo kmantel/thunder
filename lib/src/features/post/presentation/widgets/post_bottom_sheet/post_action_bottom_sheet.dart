@@ -211,7 +211,7 @@ class _PostActionBottomSheetState extends State<PostActionBottomSheet> {
 
     return SafeArea(
       child: AnimatedSize(
-        duration: const Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: 0),
         curve: Curves.easeInOutCubicEmphasized,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12.0),

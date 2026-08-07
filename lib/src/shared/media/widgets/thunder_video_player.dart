@@ -136,7 +136,7 @@ class _ThunderVideoPlayerState extends State<ThunderVideoPlayer> {
           child: Stack(
             children: [
               AnimatedOpacity(
-                duration: const Duration(milliseconds: 300),
+                duration: const Duration(milliseconds: 0),
                 opacity: isVideoControlsVisible ? 1.0 : 0.0,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -173,7 +173,7 @@ class _ThunderVideoPlayerState extends State<ThunderVideoPlayer> {
                     debounceTimer?.cancel();
                     timer?.cancel();
 
-                    debounceTimer = Timer(const Duration(milliseconds: 300), () {
+                    debounceTimer = Timer(const Duration(milliseconds: 0), () {
                       setState(() => isVideoControlsVisible = true);
                     });
                   },
@@ -198,7 +198,7 @@ class _ThunderVideoPlayerState extends State<ThunderVideoPlayer> {
                 ),
               ),
               AnimatedOpacity(
-                duration: const Duration(milliseconds: 300),
+                duration: const Duration(milliseconds: 0),
                 opacity: isVideoControlsVisible ? 1.0 : 0.0,
                 child: VideoPlayerControls(
                   controller: _videoPlayerController,

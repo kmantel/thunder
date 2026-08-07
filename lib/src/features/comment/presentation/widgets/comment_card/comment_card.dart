@@ -254,7 +254,7 @@ class _CommentCardState extends State<CommentCard> {
           child,
           if (widget.replies == 0 && comment.childCount! > 0 && !widget.hideReplyCount)
             AnimatedCrossFade(
-              duration: Duration(milliseconds: 350),
+              duration: Duration(milliseconds: 0),
               sizeCurve: Curves.easeInOutCubicEmphasized,
               firstChild: SizedBox(width: MediaQuery.sizeOf(context).width),
               secondChild: AdditionalCommentCard(

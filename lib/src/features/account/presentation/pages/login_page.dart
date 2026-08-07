@@ -156,7 +156,7 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   AnimatedCrossFade(
-                    duration: const Duration(milliseconds: 500),
+                    duration: const Duration(milliseconds: 0),
                     crossFadeState: instanceInfo?.icon == null ? CrossFadeState.showFirst : CrossFadeState.showSecond,
                     firstChild: Image.asset('assets/logo.png', width: 80.0, height: 80.0),
                     secondChild: instanceInfo?.icon == null
@@ -170,7 +170,7 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
                   const SizedBox(height: 12.0),
                   AnimatedCrossFade(
                     crossFadeState: _instanceTextEditingController.text.isNotEmpty && instanceError == null ? CrossFadeState.showSecond : CrossFadeState.showFirst,
-                    duration: const Duration(milliseconds: 250),
+                    duration: const Duration(milliseconds: 0),
                     firstChild: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

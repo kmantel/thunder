@@ -94,7 +94,7 @@ class _MediaViewState extends State<MediaView> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     _overlayAnimationController = AnimationController(
-      duration: const Duration(milliseconds: 100),
+      duration: const Duration(milliseconds: 0),
       vsync: this,
     );
   }

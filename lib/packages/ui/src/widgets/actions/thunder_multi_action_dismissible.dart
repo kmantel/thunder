@@ -138,7 +138,7 @@ class _ThunderMultiActionDismissibleState<T> extends State<ThunderMultiActionDis
 
     return AnimatedContainer(
       alignment: alignment,
-      duration: const Duration(milliseconds: 200),
+      duration: const Duration(milliseconds: 0),
       color: backgroundColor,
       child: SizedBox(
         width: width,

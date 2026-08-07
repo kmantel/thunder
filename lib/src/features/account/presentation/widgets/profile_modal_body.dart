@@ -244,13 +244,13 @@ class _ProfileSelectState extends State<ProfileSelect> {
                                 },
                           borderRadius: BorderRadius.circular(50),
                           child: AnimatedSize(
-                            duration: const Duration(milliseconds: 250),
+                            duration: const Duration(milliseconds: 0),
                             child: ListTile(
                               leading: Stack(
                                 children: [
                                   AnimatedCrossFade(
                                     crossFadeState: accounts![index].instanceIcon == null ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-                                    duration: const Duration(milliseconds: 500),
+                                    duration: const Duration(milliseconds: 0),
                                     firstChild: const SizedBox(
                                       child: Padding(
                                         padding: EdgeInsets.only(left: 8, top: 8, right: 8, bottom: 8),
@@ -284,7 +284,7 @@ class _ProfileSelectState extends State<ProfileSelect> {
                                     bottom: 1,
                                     child: AnimatedOpacity(
                                       opacity: accounts![index].alive == null ? 0 : 1,
-                                      duration: const Duration(milliseconds: 500),
+                                      duration: const Duration(milliseconds: 0),
                                       child: Icon(
                                         accounts![index].alive == true ? Icons.check_circle_rounded : Icons.remove_circle_rounded,
                                         size: 10,
@@ -304,7 +304,7 @@ class _ProfileSelectState extends State<ProfileSelect> {
                                     children: [
                                       const SizedBox(width: 7),
                                       AnimatedOpacity(
-                                        duration: const Duration(milliseconds: 250),
+                                        duration: const Duration(milliseconds: 0),
                                         opacity: accounts![index].totalUnreadCount == null ? 0 : 1,
                                         child: Badge(
                                           label: Text(accounts![index].totalUnreadCount.toString()),
@@ -318,7 +318,7 @@ class _ProfileSelectState extends State<ProfileSelect> {
                                 children: [
                                   Text(accounts![index].account.instance.replaceAll('https://', '')),
                                   AnimatedSize(
-                                    duration: const Duration(milliseconds: 250),
+                                    duration: const Duration(milliseconds: 0),
                                     child: accounts![index].version == null
                                         ? const SizedBox(height: 20, width: 0)
                                         : Row(
@@ -342,7 +342,7 @@ class _ProfileSelectState extends State<ProfileSelect> {
                                           ),
                                   ),
                                   AnimatedSize(
-                                    duration: const Duration(milliseconds: 250),
+                                    duration: const Duration(milliseconds: 0),
                                     child: accounts![index].latency == null
                                         ? const SizedBox(height: 20, width: 0)
                                         : Row(
@@ -489,13 +489,13 @@ class _ProfileSelectState extends State<ProfileSelect> {
                             },
                             borderRadius: BorderRadius.circular(50),
                             child: AnimatedSize(
-                              duration: const Duration(milliseconds: 250),
+                              duration: const Duration(milliseconds: 0),
                               child: ListTile(
                                 leading: Stack(
                                   children: [
                                     AnimatedCrossFade(
                                       crossFadeState: anonymousInstances![index].instanceIcon == null ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-                                      duration: const Duration(milliseconds: 500),
+                                      duration: const Duration(milliseconds: 0),
                                       firstChild: const SizedBox(
                                         child: Padding(
                                           padding: EdgeInsets.only(left: 8, top: 8, right: 8, bottom: 8),
@@ -528,7 +528,7 @@ class _ProfileSelectState extends State<ProfileSelect> {
                                       bottom: 1,
                                       child: AnimatedOpacity(
                                         opacity: anonymousInstances![index].alive == null ? 0 : 1,
-                                        duration: const Duration(milliseconds: 500),
+                                        duration: const Duration(milliseconds: 0),
                                         child: Icon(
                                           anonymousInstances![index].alive == true ? Icons.check_circle_rounded : Icons.remove_circle_rounded,
                                           size: 10,
@@ -555,7 +555,7 @@ class _ProfileSelectState extends State<ProfileSelect> {
                                   children: [
                                     Text(anonymousInstances![index].anonymousInstance.instance),
                                     AnimatedSize(
-                                      duration: const Duration(milliseconds: 250),
+                                      duration: const Duration(milliseconds: 0),
                                       child: anonymousInstances![index].version == null
                                           ? const SizedBox(height: 20, width: 0)
                                           : Row(
@@ -579,7 +579,7 @@ class _ProfileSelectState extends State<ProfileSelect> {
                                             ),
                                     ),
                                     AnimatedSize(
-                                      duration: const Duration(milliseconds: 250),
+                                      duration: const Duration(milliseconds: 0),
                                       child: anonymousInstances![index].latency == null
                                           ? const SizedBox(height: 20, width: 0)
                                           : Row(
@@ -686,7 +686,7 @@ class _ProfileSelectState extends State<ProfileSelect> {
 
     List<AccountExtended> accountsExtended = (await Future.wait(accounts.map((Account account) async {
       return AccountExtended(account: account, instance: account.instance, instanceIcon: null);
-    })).timeout(const Duration(seconds: 5)))
+    })).timeout(const Duration(seconds: 0)))
       ..sort((a, b) => a.account.index.compareTo(b.account.index));
 
     // Intentionally don't await these here
@@ -700,7 +700,7 @@ class _ProfileSelectState extends State<ProfileSelect> {
   Future<void> fetchInstanceInfo(List<AccountExtended> accountsExtended) async {
     for (final account in accountsExtended) {
       final instanceInfo = await getInstanceInfo(account.instance).timeout(
-        const Duration(seconds: 5),
+        const Duration(seconds: 0),
         onTimeout: () => ThunderInstanceInfo(
           domain: account.instance!,
           name: fetchInstanceNameFromUrl(account.instance!)!,
@@ -760,7 +760,7 @@ class _ProfileSelectState extends State<ProfileSelect> {
   Future<void> fetchAnonymousInstanceInfo(List<AnonymousInstanceExtended> anonymousInstancesExtended) async {
     for (final anonymousInstanceExtended in anonymousInstancesExtended) {
       final instanceInfo = await getInstanceInfo(anonymousInstanceExtended.anonymousInstance.instance).timeout(
-        const Duration(seconds: 5),
+        const Duration(seconds: 0),
         onTimeout: () => ThunderInstanceInfo(
           domain: anonymousInstanceExtended.anonymousInstance.instance,
           name: fetchInstanceNameFromUrl(anonymousInstanceExtended.anonymousInstance.instance)!,

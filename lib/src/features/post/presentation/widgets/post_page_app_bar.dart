@@ -105,7 +105,7 @@ class _PostAppBarTitleState extends State<PostAppBarTitle> with TickerProviderSt
         alignment: Alignment.centerLeft,
         children: [
           AnimatedPositioned(
-            duration: const Duration(milliseconds: 300),
+            duration: const Duration(milliseconds: 0),
             curve: Curves.easeInOut,
             top: hasSubtitle ? 2 : 16,
             left: 0,

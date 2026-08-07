@@ -195,7 +195,7 @@ class _FabSettingsPage extends State<FabSettingsPage> with TickerProviderStateMi
   }
 
   late final AnimationController _controller = AnimationController(
-    duration: const Duration(milliseconds: 100),
+    duration: const Duration(milliseconds: 0),
     vsync: this,
   );
 
@@ -223,13 +223,13 @@ class _FabSettingsPage extends State<FabSettingsPage> with TickerProviderStateMi
             // Ensure that the selected setting is visible on the screen
             Scrollable.ensureVisible(
               settingToHighlightKey.currentContext!,
-              duration: const Duration(milliseconds: 250),
+              duration: const Duration(milliseconds: 0),
               curve: Curves.easeInOut,
             );
           }
 
           // Give time for the highlighting to appear, then turn it off
-          Timer(const Duration(seconds: 1), () {
+          Timer(const Duration(seconds: 0), () {
             setState(() => settingToHighlight = null);
           });
         });
@@ -320,7 +320,7 @@ class _FabSettingsPage extends State<FabSettingsPage> with TickerProviderStateMi
                   onLongPress: () => shareLocalSetting(context, LocalSettings.enableFeedsFab),
                   highlighted: settingToHighlight == LocalSettings.enableFeedsFab),
               AnimatedSwitcher(
-                duration: const Duration(milliseconds: 250),
+                duration: const Duration(milliseconds: 0),
                 switchInCurve: Curves.easeInOut,
                 switchOutCurve: Curves.easeInOut,
                 transitionBuilder: (Widget child, Animation<double> animation) {
@@ -468,7 +468,7 @@ class _FabSettingsPage extends State<FabSettingsPage> with TickerProviderStateMi
                   onLongPress: () => shareLocalSetting(context, LocalSettings.enablePostsFab),
                   highlighted: settingToHighlight == LocalSettings.enablePostsFab),
               AnimatedSwitcher(
-                duration: const Duration(milliseconds: 250),
+                duration: const Duration(milliseconds: 0),
                 switchInCurve: Curves.easeInOut,
                 switchOutCurve: Curves.easeInOut,
                 transitionBuilder: (Widget child, Animation<double> animation) {

@@ -66,7 +66,7 @@ class _TagLineState extends State<TagLine> {
       ),
       child: AnimatedCrossFade(
         crossFadeState: taglineIsLong ? CrossFadeState.showSecond : CrossFadeState.showFirst,
-        duration: const Duration(milliseconds: 250),
+        duration: const Duration(milliseconds: 0),
         sizeCurve: Curves.easeInOutCubicEmphasized,
         firstChild: CommonMarkdownBody(key: taglineBodyKey, body: tagline!),
         secondChild: ExpandableNotifier(

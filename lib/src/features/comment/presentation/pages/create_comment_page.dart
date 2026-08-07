@@ -424,7 +424,7 @@ class _CreateCommentPageState extends State<CreateCommentPage> with WidgetsBindi
                                         ),
                                       ),
                                       crossFadeState: showPreview ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-                                      duration: const Duration(milliseconds: 120),
+                                      duration: const Duration(milliseconds: 0),
                                       excludeBottomFocus: false,
                                     )
                                   ],

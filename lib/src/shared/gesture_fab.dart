@@ -64,7 +64,7 @@ class _GestureFabState extends State<GestureFab> with SingleTickerProviderStateM
 
     _controller = AnimationController(
       value: isFabOpen ? 1.0 : 0.0,
-      duration: const Duration(milliseconds: 250),
+      duration: const Duration(milliseconds: 0),
       vsync: this,
     );
 
@@ -204,12 +204,12 @@ class _GestureFabState extends State<GestureFab> with SingleTickerProviderStateM
           isFabOpen ? 0.7 : 1.0,
           1.0,
         ),
-        duration: const Duration(milliseconds: 250),
+        duration: const Duration(milliseconds: 0),
         curve: const Interval(0.0, 0.5, curve: Curves.easeOut),
         child: AnimatedOpacity(
           opacity: isFabOpen ? 0.0 : 1.0,
           curve: const Interval(0.25, 1.0, curve: Curves.easeInOut),
-          duration: const Duration(milliseconds: 250),
+          duration: const Duration(milliseconds: 0),
           child: GestureDetector(
             onVerticalDragUpdate: (details) {
               if (details.delta.dy < -5) {

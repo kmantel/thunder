@@ -100,7 +100,7 @@ class FeedFAB extends StatelessWidget {
     }
 
     return AnimatedSwitcher(
-      duration: const Duration(milliseconds: 200),
+      duration: const Duration(milliseconds: 0),
       switchInCurve: Curves.ease,
       switchOutCurve: Curves.ease,
       transitionBuilder: (child, animation) {

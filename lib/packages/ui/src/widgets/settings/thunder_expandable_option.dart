@@ -22,7 +22,7 @@ class _ThunderExpandableOptionState extends State<ThunderExpandableOption> with 
   late bool _isExpanded;
 
   late final AnimationController _controller = AnimationController(
-    duration: const Duration(milliseconds: 120),
+    duration: const Duration(milliseconds: 0),
     vsync: this,
   );
 
@@ -75,7 +75,7 @@ class _ThunderExpandableOptionState extends State<ThunderExpandableOption> with 
           ),
         ),
         AnimatedSwitcher(
-          duration: const Duration(milliseconds: 250),
+          duration: const Duration(milliseconds: 0),
           switchInCurve: Curves.easeInOut,
           switchOutCurve: Curves.easeInOut,
           transitionBuilder: (child, animation) {

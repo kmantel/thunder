@@ -28,7 +28,7 @@ class CommentCardHeaderReplyCount extends StatelessWidget {
 
     return AnimatedOpacity(
       opacity: (hidden && (collapseParentCommentOnGesture || replies > 0)) ? 1.0 : 0.0,
-      duration: const Duration(milliseconds: 130),
+      duration: const Duration(milliseconds: 0),
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 5.0),
         decoration: BoxDecoration(

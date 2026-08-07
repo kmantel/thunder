@@ -148,7 +148,7 @@ class _CommentNavigatorFabState extends State<CommentNavigatorFab> {
       index: previousIndex,
       scrollController: widget.scrollController,
       alignment: alignmentOffset,
-      duration: (estimatedDistance) => const Duration(milliseconds: 450),
+      duration: (estimatedDistance) => const Duration(milliseconds: 0),
       curve: (estimatedDistance) => Curves.easeInOutCubicEmphasized,
     );
   }
@@ -184,7 +184,7 @@ class _CommentNavigatorFabState extends State<CommentNavigatorFab> {
       index: parentCommentIndex,
       scrollController: widget.scrollController,
       alignment: alignmentOffset,
-      duration: (estimatedDistance) => const Duration(milliseconds: 450),
+      duration: (estimatedDistance) => const Duration(milliseconds: 0),
       curve: (estimatedDistance) => Curves.easeInOutCubicEmphasized,
     );
   }
@@ -205,7 +205,7 @@ class _CommentNavigatorFabState extends State<CommentNavigatorFab> {
       index: nextIndex,
       scrollController: widget.scrollController,
       alignment: alignmentOffset,
-      duration: (estimatedDistance) => const Duration(milliseconds: 450),
+      duration: (estimatedDistance) => const Duration(milliseconds: 0),
       curve: (estimatedDistance) => Curves.easeInOutCubicEmphasized,
     );
   }
@@ -240,7 +240,7 @@ class _CommentNavigatorFabState extends State<CommentNavigatorFab> {
       index: parentCommentIndex,
       scrollController: widget.scrollController,
       alignment: alignmentOffset,
-      duration: (estimatedDistance) => const Duration(milliseconds: 450),
+      duration: (estimatedDistance) => const Duration(milliseconds: 0),
       curve: (estimatedDistance) => Curves.easeInOutCubicEmphasized,
     );
   }

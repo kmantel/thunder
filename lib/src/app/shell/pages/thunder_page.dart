@@ -356,7 +356,7 @@ class _ThunderState extends State<Thunder> {
                 floatingActionButton: context.select<FabPreferencesCubit, bool>((cubit) => cubit.state.enableFeedsFab)
                     ? AnimatedOpacity(
                         opacity: selectedPageIndex == 0 ? 1.0 : 0.0,
-                        duration: const Duration(milliseconds: 150),
+                        duration: const Duration(milliseconds: 0),
                         curve: Curves.easeIn,
                         child: IgnorePointer(ignoring: selectedPageIndex != 0, child: FeedFAB(actionController: _rootFeedActionController)),
                       )
@@ -652,7 +652,7 @@ class _ThunderState extends State<Thunder> {
       ),
       background: theme.cardColor,
       autoDismiss: true,
-      duration: const Duration(seconds: 5),
+      duration: const Duration(seconds: 0),
       slideDismissDirection: DismissDirection.vertical,
     );
   }

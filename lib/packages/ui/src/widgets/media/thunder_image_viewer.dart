@@ -253,7 +253,7 @@ class _ThunderImageViewerState extends State<ThunderImageViewer> with TickerProv
   }
 
   void _animateTo({
-    Duration duration = const Duration(milliseconds: 180),
+    Duration duration = const Duration(milliseconds: 0),
     Curve curve = Curves.easeOutCubic,
     required double targetScale,
     required Offset targetOffset,

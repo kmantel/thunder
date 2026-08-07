@@ -700,7 +700,7 @@ class _CreatePostPageState extends State<CreatePostPage> with WidgetsBindingObse
                                     spellCheckConfiguration: const SpellCheckConfiguration.disabled(),
                                   ),
                                   crossFadeState: showPreview ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-                                  duration: const Duration(milliseconds: 120),
+                                  duration: const Duration(milliseconds: 0),
                                   excludeBottomFocus: false,
                                 ),
                               ]),

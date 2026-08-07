@@ -131,7 +131,7 @@ class _SearchInitialView extends StatelessWidget {
     final showTrending = trendingCommunities?.isNotEmpty == true && searchType == MetaSearchType.communities;
 
     return AnimatedCrossFade(
-      duration: const Duration(milliseconds: 250),
+      duration: const Duration(milliseconds: 0),
       crossFadeState: showTrending ? CrossFadeState.showSecond : CrossFadeState.showFirst,
       firstChild: _SearchEmptyPrompt(
         communityToSearch: communityToSearch,

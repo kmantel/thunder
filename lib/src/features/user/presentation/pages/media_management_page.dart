@@ -93,7 +93,7 @@ class MediaManagementPage extends StatelessWidget {
                               child: Column(
                                 children: [
                                   AnimatedSize(
-                                    duration: const Duration(milliseconds: 250),
+                                    duration: const Duration(milliseconds: 0),
                                     child: Stack(
                                       children: [
                                         ExtendedImage.network(
@@ -160,7 +160,7 @@ class MediaManagementPage extends StatelessWidget {
                                             isScrollControlled: false,
                                             builder: (context) {
                                               return AnimatedSize(
-                                                duration: const Duration(milliseconds: 250),
+                                                duration: const Duration(milliseconds: 0),
                                                 child: BlocProvider.value(
                                                   value: userMediaCubit,
                                                   child: BlocBuilder<UserMediaCubit, UserMediaState>(

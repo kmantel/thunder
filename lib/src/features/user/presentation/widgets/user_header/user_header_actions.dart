@@ -200,7 +200,7 @@ class _FeedTypeActionChip extends StatelessWidget {
     final label = feedType == FeedTypeSubview.post ? l10n.posts : l10n.comments;
 
     return AnimatedSize(
-      duration: const Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 0),
       curve: Curves.easeInOutCubicEmphasized,
       child: ThunderActionChip(
         icon: icon,

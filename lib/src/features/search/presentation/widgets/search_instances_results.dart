@@ -27,7 +27,7 @@ class SearchInstancesResults extends StatelessWidget {
           itemBuilder: (context, index) {
             final instanceInfo = instances[index];
             return AnimatedCrossFade(
-              duration: const Duration(milliseconds: 250),
+              duration: const Duration(milliseconds: 0),
               firstChild: InstanceListEntry(
                 instance: ThunderInstanceInfo(
                   id: instanceInfo.id,

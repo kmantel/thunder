@@ -67,7 +67,7 @@ class CommentContent extends StatefulWidget {
 
 class _CommentContentState extends State<CommentContent> with SingleTickerProviderStateMixin {
   late final _controller = AnimationController(
-    duration: const Duration(milliseconds: 100),
+    duration: const Duration(milliseconds: 0),
     vsync: this,
   );
 
@@ -96,7 +96,7 @@ class _CommentContentState extends State<CommentContent> with SingleTickerProvid
       child: Container(
         padding: widget.level > 0 ? EdgeInsets.only(left: (nestedCommentIndicatorStyle == NestedCommentIndicatorStyle.thick ? widget.level + 1 : widget.level) * 4.0) : null,
         child: AnimatedSize(
-          duration: const Duration(milliseconds: 250),
+          duration: const Duration(milliseconds: 0),
           curve: Curves.easeInOutCubicEmphasized,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -105,7 +105,7 @@ class _CommentContentState extends State<CommentContent> with SingleTickerProvid
               Divider(height: 1),
               CommentCardHeader(account: widget.account, comment: widget.comment, hidden: widget.hidden),
               AnimatedSwitcher(
-                duration: const Duration(milliseconds: 130),
+                duration: const Duration(milliseconds: 0),
                 switchInCurve: Curves.easeInOut,
                 switchOutCurve: Curves.easeInOut,
                 transitionBuilder: (Widget child, Animation<double> animation) => SizeTransition(sizeFactor: animation, child: SlideTransition(position: _offsetAnimation, child: child)),
